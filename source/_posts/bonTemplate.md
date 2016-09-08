@@ -27,7 +27,7 @@ node app
 访问http://127.0.0.1:3000
 
 ####模板
-```
+```html
 <script id=tpl type="html">
 	<div>{this.name}</div>
 	<div>{this.sex}</div>
@@ -51,7 +51,7 @@ a.innerHTML = str;
 
 
 ##可嵌套的循环标签
-```
+```html
 <each this.userList=u>
 	<div>{u.name}</div>
 	<div>{u.sex}</div>
@@ -84,7 +84,7 @@ a.innerHTML = str;
 ```
 
 ##条件标签
-```
+```html
 <div>
 	<div>{this.name}</div>
 	<div>{this.sex}</div>
@@ -103,7 +103,7 @@ a.innerHTML = str;
 ```
 
 ##表达式
-```
+```html
 <div>
 	<div>{this.name}</div>
 	<div>{this.sex == 'm' ? '男' : '女'}</div>
@@ -127,7 +127,7 @@ bon.addFun({
 });
 ```
 
-```
+```html
 <div>
 	<div>{this.name}</div>
 	<div>{this.sex:myFun}</div>
@@ -151,7 +151,7 @@ bon.addFun({
 })
 ```
 
-```
+```html
 <each this.userList=u>
 	<div>{u.name}</div>
 	<div>{u.sex == 'm' ? '男' : '女'}</div>
