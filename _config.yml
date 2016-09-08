@@ -1,18 +1,18 @@
-﻿# Hexo Configuration
+# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Alex之家
-subtitle: www.bonjs.com
-description: 
-author: Alex
-language: zh-CN
+title: Hexo
+subtitle:
+description:
+author: John Doe
+language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.bonjs.com
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -68,6 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/bonjs/bonjs.github.io.git
-  branch: master
+   type: git
+   repository: https://github.com/bonjs/bonjs.github.io.git
+   branch: master
