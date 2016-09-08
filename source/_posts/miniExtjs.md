@@ -13,18 +13,18 @@ ext 是我顶喜欢的一款js框架, 原因不仅仅只是因为它有着很专
 1. 首先下载源码, 解压, 找到以下文件:
 ~~~javascript
 /src/core/src/ext.js
-      /src/core/src/lang/number.js
-      /src/core/src/lang/string.js
-      /src/core/src/lang/date.js 
+/src/core/src/lang/number.js
+/src/core/src/lang/string.js
+/src/core/src/lang/date.js 
 
-      /src/core/src/lang/object.js
-      /src/core/src/lang/array.js 
-      /src/core/src/lang/function.js 
-      /src/core/src/class/base.js 
-      /src/core/src/class/class.js  
-      /src/core/src/class/classmanager.js 
-      /src/core/src/class/loader.js  
-      /src/core/src/lang/error.js  
+/src/core/src/lang/object.js
+/src/core/src/lang/array.js 
+/src/core/src/lang/function.js 
+/src/core/src/class/base.js 
+/src/core/src/class/class.js  
+/src/core/src/class/classmanager.js 
+/src/core/src/class/loader.js  
+/src/core/src/lang/error.js  
 ~~~
 
  2. 把这些文件复制出来, 然后在一个页面中依次引用, 注意顺序不要乱, 然后用编辑器打开error.js , 在文件的最后部分注释掉一行代码:
