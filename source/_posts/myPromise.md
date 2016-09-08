@@ -4,7 +4,7 @@ date: 2016-06-26 15:39:05
 tags:
 ---
 
-ThePromise.js
+### ThePromise.js
 ~~~javascript
 function ThePromise(fns) {
     this.action(fns);
@@ -19,7 +19,7 @@ ThePromise.prototype.action = function(fns) {
 };
 ~~~
 
-调用方式
+### 调用方式
 ~~~javascript
 function f1(f) {
     $.get('data.json?type=1', {}, function(d) {
