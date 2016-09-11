@@ -20,7 +20,7 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 
 <script>
 	var leftP = $('#leftPanel');
-	jQuery(window).scroll(function(e) { 
+	var leftPanelFun = function() {
 		if(window.scrollY > 55 && document.body.clientWidth > 830){
 			leftP.css({
 				'position': 'fixed',
@@ -32,6 +32,12 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 				'top': '0px'
 			});
 		}
+	}
+	$(window).on({
+		scroll: leftPanelFun,
+		relize: leftPanelFun
 	})
 	
 </script>
+
+<%- partial('baiduStat') %>

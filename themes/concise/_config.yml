@@ -24,4 +24,6 @@ addthis:
   google: true
   pinterest: true
 
+baiduStat: true
+  
 google_analytics:
