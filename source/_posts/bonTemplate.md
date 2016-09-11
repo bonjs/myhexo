@@ -29,9 +29,9 @@ node app
 #### 模板
 ```html
 <script id=tpl type="html">
-	<div>{this.name}</div>
-	<div>{this.sex}</div>
-	<div>{this.email}</div>
+	<div>{name}</div>
+	<div>{sex}</div>
+	<div>{email}</div>
 </script>
 ```
 #### 数据
@@ -52,7 +52,7 @@ a.innerHTML = str;
 
 ## 可嵌套的循环标签
 ```html
-<each this.userList=u>
+<each userList=u>
 	<div>{u.name}</div>
 	<div>{u.sex}</div>
 	<div>{u.email}</div>
@@ -86,10 +86,10 @@ a.innerHTML = str;
 ## 条件标签
 ```html
 <div>
-	<div>{this.name}</div>
-	<div>{this.sex}</div>
-	<div>{this.email}</div>
-	<if this.sex == 'm'>
+	<div>{name}</div>
+	<div>{sex}</div>
+	<div>{email}</div>
+	<if sex == 'm'>
 		爱好数码
 	</if>
 </div>
@@ -105,9 +105,9 @@ a.innerHTML = str;
 ## 表达式
 ```html
 <div>
-	<div>{this.name}</div>
-	<div>{this.sex == 'm' ? '男' : '女'}</div>
-	<div>{this.email}</div>
+	<div>{name}</div>
+	<div>{sex == 'm' ? '男' : '女'}</div>
+	<div>{email}</div>
 </div>
 ```
 ```javascript
@@ -129,9 +129,9 @@ bon.addFun({
 
 ```html
 <div>
-	<div>{this.name}</div>
-	<div>{this.sex:myFun}</div>
-	<div>{this.email}</div>
+	<div>{name}</div>
+	<div>{sex:myFun}</div>
+	<div>{email}</div>
 </div>
 ```
 ```javascript
@@ -152,7 +152,7 @@ bon.addFun({
 ```
 
 ```html
-<each this.userList=u>
+<each userList=u>
 	<div>{u.name}</div>
 	<div>{u.sex == 'm' ? '男' : '女'}</div>
 	<div>{u.email:formateEmail}</div>
