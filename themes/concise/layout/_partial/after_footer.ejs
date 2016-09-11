@@ -1,4 +1,8 @@
+<!--
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+-->
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
 
 <% if (config.disqus_shortname){ %>
 <script type="text/javascript">
@@ -13,3 +17,21 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 }());
 </script>
 <% } %>
+
+<script>
+	var leftP = $('#leftPanel');
+	jQuery(window).scroll(function(e) { 
+		if(window.scrollY > 55 && document.body.clientWidth > 830){
+			leftP.css({
+				'position': 'fixed',
+				'top': '20px'
+			});
+		} else {
+			leftP.css({
+				'position': 'static',
+				'top': '0px'
+			});
+		}
+	})
+	
+</script>
