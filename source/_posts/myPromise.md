@@ -5,6 +5,10 @@ tags:
 ---
 
 ### ThePromise.js
+
+https://github.com/bonjs/ThePromise
+
+
 ~~~javascript
 function ThePromise(fns) {
     this.action(fns);
