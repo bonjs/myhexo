@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+ 
+ <div id=renderDiv style="height: 300px; width: 600px"></div>
+<script src="/js/echarts-2.2.7/build/dist/echarts.js"></script>
+
+<script>
+
+	require.config({
+		paths : {
+			echarts : '/js/echarts-2.2.7/src'
+		}
+	});
+	// 按需加载
+	require([
+	         'echarts', 
+	         'echarts/chart/line',
+	         'echarts/chart/bar',
+	         'echarts/chart/pie',
+	], function(echarts) {
+
+		window. myChart = echarts.init(document.getElementById('renderDiv'));
+
+		option = {
+		
+			symbol:'none',
+			title : {
+				text: '未来一周气温变化',
+				subtext: '纯属虚构'
+			},
+			tooltip : {
+				trigger: 'axis'
+			},
+			legend: {
+				data:['最高气温','最低气温']
+			},
+			toolbox: {
+				show : true,
+				feature : {
+					mark : {show: true},
+					dataView : {show: true, readOnly: false},
+					magicType : {show: true, type: ['line', 'bar']},
+					restore : {show: true},
+					saveAsImage : {show: true}
+				}
+			},
+			calculable : true,
+			xAxis : [
+			  
+			   {
+					type : 'category',
+					data : function() {
+						var d = new Date().getTime();
+						var arr = []
+						for(var i = 0; i < 50; i ++) {
+							arr.push('');
+							
+						}
+						return arr;
+					}(),
+					
+					axisLabel : {
+						formatter: function(v) {
+							var d = new Date(v);
+							return d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+						}
+					}
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+				}
+			],
+			series : [
+				{
+					name:'最低气温',
+					type:'line',
+					data:function() {
+						var arr = [];
+						for(var i = 0; i < 50; i ++) {
+							arr.push(0);
+						}
+						return arr;
+					}(),
+					markPoint : {
+						data : [
+							{name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+						]
+					}
+				}
+			]
+		};		
+		
+		myChart.setOption(option, true);
+		
+		var lastData = 11;
+		var axisData;
+		
+		var t = new Date().getTime();
+		setInterval(function (){
+			lastData += Math.random() * ((Math.round(Math.random() * 10) % 2) == 0 ? 1 : -1);
+			lastData = lastData.toFixed(1) - 0;
+			
+			var x = new Date().getTime();
+			var y = f1(x);
+			
+			axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+		
+			// 动态数据接口 addData
+			myChart.addData([
+				[
+					0,        // 系列索引
+					lastData, // 新增数据
+					false,    // 新增数据是否从队列头部插入
+					false,    // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+					x // 坐标轴标签
+				]
+			]);
+		},600);
+		
+		function f1(v) {
+			var n = 100;
+			var sum = 0;
+			for(var i = 1; i <= n; i ++) {
+				var a = Math.sin((2 * i - 1) * v) / (2 * i - 1 );
+				sum += a;
+			}
+			sum = sum / Math.PI
+			return sum;
+		}
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>
