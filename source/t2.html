@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Template</title>
+ 
+ <div id=renderDiv style="height: 400px; width: 800px"></div>
+<script src="/js/echarts-2.2.7/build/dist/echarts.js"></script>
+
+<script>
+	
+	require.config({
+		paths : {
+			echarts : '/js/echarts-2.2.7/src'
+		}
+	});
+	// 按需加载
+	require([
+		 'echarts', 
+		 'echarts/chart/line',
+		 'echarts/chart/bar',
+		 'echarts/chart/pie',
+		 'echarts/theme/macarons',
+	], function(echarts) {
+
+		window. myChart = echarts.init(document.getElementById('renderDiv'), 'macarons');
+
+		var option = {
+			
+			title : {
+				text : 'fds',
+				//subtext : 'dataZoom支持',
+			},
+			tooltip : {
+				trigger: 'item',
+				formatter : function (params) {
+					var date = new Date(params.value[0]);
+					data = date.getFullYear() + '-'
+						   + (date.getMonth() + 1) + '-'
+						   + date.getDate() + ' '
+						   + date.getHours() + ':'
+						   + date.getMinutes();
+					return data + '<br/>'
+						   + params.value[1] + ', ' 
+						   + params.value[2];
+				}
+			},
+		
+			legend : {
+				data : ['series1']
+			},
+			grid: {
+				y2: 80
+			},
+			xAxis : [
+				{
+					type : 'time',
+					//splitNumber:10
+				}
+			],
+			yAxis : [
+				{
+					type : 'value'
+				}
+			],
+			series : [
+				{
+					name: '正弦波',
+					type: 'line',
+					//showAllSymbol: false,
+					data: [0]
+				}
+			]
+		};
+		myChart.setOption(option, true);
+		
+		setInterval(function() {
+			option.series[0].data = base(function(x) {
+				return Math.sin(x / 1000);
+			});
+			
+			myChart.setOption(option, true);
+		},10);
+		
+		function base(fn) {
+			var d = [];
+			var t = new Date().getTime();
+			for(var i = 0; i <= 1000; i ++) {
+				var x = t + 10 * i;
+				d[i] = ([
+					x,
+					fn.call(this, x),
+					0
+				]);
+			}
+			return d;
+		}
+		
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>
