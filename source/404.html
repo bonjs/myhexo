@@ -1,0 +1,9 @@
+﻿<script>
+	var url = window.location.href;
+	document.write('没有找到此页: ' + url);
+	document.write('<br>3秒后将转向首页 ');
+	
+	setTimeout(function() {
+		window.location.href = '/';
+	}, 3000);
+</script>
