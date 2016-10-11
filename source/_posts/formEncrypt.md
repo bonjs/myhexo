@@ -27,9 +27,9 @@ $.fn.ajaxSubmit = function() {
 	
 	return function(opt) {
 		var form = this;
-		var beforeSubmit = opt.beforeSubmit || function() {};
+		var beforeSubmit = opt.beforeSubmit;
 		opt.beforeSubmit = function(fields) {
-			var result = beforeSubmit.apply(this, arguments);
+			var result = beforeSubmit && beforeSubmit.apply(this, arguments);
 
 			fields.forEach(function(fieldObj, i) {
 				if(!!form[0][fieldObj.name].getAttribute('encrypt') == true) { 
