@@ -28,6 +28,12 @@ npm install bonTemplate --save-dev
 node app
 ```
 
+### 或者
+```Bash
+npm install bon-template --save-dev
+node app
+```
+
 访问http://127.0.0.1:3000
 
 #### 模板
