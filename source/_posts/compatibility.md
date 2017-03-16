@@ -1,7 +1,7 @@
 ---
 title: chrome下禁止中文输入的新方案
 date: 2017-02-23 12:47:27
-tags: [compatibility,兼容,浏览器,chrome,输入法,中文]
+tags: [compatibility,兼容,chrome,输入法]
 ---
 
 现实中我们经常会遇禁止输入中文的场景，常见的处理方式
