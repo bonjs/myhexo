@@ -28,7 +28,7 @@ if (page.archive){
                 <h2 class="title link"><span datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></span><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
               <% } %>
             <% } else { %>
-              <h2 class="archive-post"><span datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></span><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+              <h2 class="archive-post"><span datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></span><a path="<%- item.path %>"><%= item.title %></a></h1>
             <% } %>
           </header>
         </div>

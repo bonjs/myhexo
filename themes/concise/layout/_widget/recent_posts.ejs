@@ -1,12 +1,15 @@
+
+
 <% if (site.posts.length){ %>
-<div class="widget tag">
+<div class="widget tag" data-instant>
   <h3 class="title"><%= __('recent_posts') %></h3>
-  <ul class="entry">
+  <ul class="entry" data-instant>
     <% site.posts.sort('date', -1).limit(12).each(function(post){ %>
       <li>
-        <a href="<%= config.root %><%= post.path %>"><%= post.title %></a>
+        <a path="<%= post.path %>"><%= post.title %></a>
       </li>
     <% }); %>
   </ul>
 </div>
 <% } %>
+
