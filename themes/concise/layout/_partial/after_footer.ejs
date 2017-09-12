@@ -2,7 +2,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 -->
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"  data-no-instant></script>
 
 <% if (config.disqus_shortname){ %>
 <script type="text/javascript">
@@ -39,27 +39,85 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 	$(window).on({
 		scroll: rightPanelFun,
 		resize: rightPanelFun
-	})
+	});
+</script>
+
+<script>
+
+	(function() {
 	
+		var protocol = window.location.protocol;
+		
+		//var reg = /^((?:\d+\.){3}\d+)|.*?((?:\w+\.)?\w+)$/;
+		var reg = /^(?:.*?((?:bonjs|yoycn)\.com)|.*?((?:\w+\.)?[\w.]+))$/;
+		
+		var rootDomain = (document.domain.match(reg) || []);
+		
+		var articleDomain = 'article.' + rootDomain[1];
+		$('.archive-post, article.post, #rightPanel').find('a[path]').each(function(i, d) {
+			if(rootDomain[1]) {	// bonjs.com访问
+				var path = d.getAttribute('path').replace(/^article/g, '');
+				$(this).attr('href', protocol + '/' + '/' + articleDomain + path).removeAttr('path');
+			} else {			// 其他域名及ip访问
+				var path = d.getAttribute('path');
+				$(this).attr('href', protocol + '/' + '/' + rootDomain[2] + '/' + path).removeAttr('path');
+			}
+		});
+	})();
+</script>
+
+<script>
+	$('article.post .post-content .entry p:first-child').addClass('first-p');
 </script>
 
 <%- partial('baiduStat') %>
 
+<script src="/instantclick.js" data-no-instant></script>
+<script data-no-instant>
+	InstantClick.on('change', function (isInitialLoad) {
+		if (isInitialLoad === false) {
+			if (typeof MathJax !== 'undefined') // support MathJax
+				MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+			if (typeof prettyPrint !== 'undefined') // support google code prettify
+				prettyPrint();
+			if (typeof _hmt !== 'undefined') // support 百度统计
+				_hmt.push(['_trackPageview', location.pathname + location.search]);
+			if (typeof ga !== 'undefined') // support google analytics
+				ga('send', 'pageview', location.pathname + location.search);
+		}
+	});
+
+	InstantClick.init();
+</script>
+
 <script>
 
-
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
 
 </script>
 
+<script type="text/javascript" data-no-instant>
+	/*
+	window._pt_lt = new Date().getTime();
+	window._pt_sp_2 = [];
+	_pt_sp_2.push('setAccount,23cdd0e4');
+	var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	(function() {
+		var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+		atag.src = _protocol + 'js.ptengine.cn/23cdd0e4.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(atag, s);
+	})();
+	*/
+</script>
