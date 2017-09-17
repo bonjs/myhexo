@@ -3,8 +3,8 @@
   <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
   <nav id="main-nav">
     <ul>
-      <% for (var i in theme.menu){ %>
-      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+      <% for (var key in theme.menu){ %>
+      <li><a href="<%- theme.menu[key] %>"><%= key %></a></li>
       <% } %>
     </ul>
     <div class="clearfix"></div>
