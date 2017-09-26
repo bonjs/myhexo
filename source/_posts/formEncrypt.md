@@ -45,7 +45,7 @@ $.fn.ajaxSubmit = function() {
 
 			return result;
 		};
-		f.apply(this, arguments);
+		return f.apply(this, arguments);
 	};
 }();
 ```
