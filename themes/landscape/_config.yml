@@ -27,8 +27,6 @@ index_widgets:
 archive_type: 'monthly'
 show_count: false
 
-baiduStat: true
-
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
