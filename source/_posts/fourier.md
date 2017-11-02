@@ -19,12 +19,12 @@ tags: [正弦波,傅立叶变换]
 <div id=sawtoothDiv style="height: 400px; width: 800px"></div>
 
  
-<script src="http://bonjs.github.io/fourier/js/echarts-2.2.7/build/dist/echarts.js"></script>
+<script src="https://bonjs.github.io/fourier/js/echarts-2.2.7/build/dist/echarts.js"></script>
 
 <script>
 	require.config({
 		paths : {
-			echarts : 'http://bonjs.github.io/fourier/js/echarts-2.2.7/src'
+			echarts : 'https://bonjs.github.io/fourier/js/echarts-2.2.7/src'
 		}
 	});
 	// 按需加载
