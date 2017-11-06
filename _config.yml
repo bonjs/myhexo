@@ -4,10 +4,10 @@
 
 # Site
 title: Alex之家
-subtitle:
-description:
-author: John Doe
-language:
+subtitle: www.bonjs.com
+description: 前端,javascript,分享,技术
+author: Alex
+language: zh-CN
 timezone:
 
 # URL
@@ -63,11 +63,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+##theme: landscape
+
+theme: concise
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/bonjs/bonjs.github.io.git
-  branch: master
+   type: git
+   repository: https://github.com/bonjs/bonjs.github.io.git
+   branch: master
