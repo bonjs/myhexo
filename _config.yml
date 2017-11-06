@@ -5,14 +5,14 @@
 # Site
 title: Alex的角落
 subtitle: www.bonjs.com
-description: 前端,javascript,分享,技术
+description: 前端,javascript,分享,技术,bonTemplate,bonjs
 author: Alex
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://bonjs.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
