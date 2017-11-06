@@ -6,6 +6,11 @@
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
       <% } %>
     </header>
+	
+	<!-- sunÌí¼Ó -->
+	<% if (item.discription != undefined){ %>
+	<div style="color: #C0C0C0"><i><%=item.discription %></i></div>
+	<% } %>
     <div class="entry">
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
