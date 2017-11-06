@@ -22,6 +22,10 @@ git clone https://github.com/bonjs/bonTemplate.git
 npm install
 node app
 ```
+### 或者
+```Bash
+npm install bonTemplatee --save-dev
+```
 
 访问http://127.0.0.1:3000
 
