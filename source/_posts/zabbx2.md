@@ -1,7 +1,7 @@
 ﻿---
 title: Zabbix架构的改进方案(二)
 date: 2016-03-12 23:01:52
-tags:
+tags: [zabbix,架构]
 ---
 
 比如要做一个用户管理模块UserManager,  通过UserManager.do访问主页面, 而新增用户的地址为UserManager!add.do, 删除用户的后台请求地址为UserManager!delete.do

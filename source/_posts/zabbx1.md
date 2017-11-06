@@ -1,7 +1,7 @@
 ﻿---
 title: Zabbix架构的改进方案(一)
 date: 2016-03-03 21:02:24
-tags:
+tags: [zabbix,架构]
 ---
 最近要使用Zabbix做二次开发, 实在无力吐槽..  
 
