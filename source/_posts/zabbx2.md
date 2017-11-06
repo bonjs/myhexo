@@ -55,7 +55,7 @@ function checkPermissions() {
 
 
 效果: 
-访问 http://localhost/dam/UserManager!userList.do时返回灵气如下
+访问 http://localhost/dam/UserManager!userList.do时返回数据如下
 ~~~javascript
 [
 	{"username":"sun","sex":"f"},
