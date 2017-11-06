@@ -6,3 +6,4 @@ web/
 node_modules/
 public/
 .deploy_git/
+.deploy*/
