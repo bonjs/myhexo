@@ -23,6 +23,6 @@ http	loginProxy.html
 后来想到了一个解决方案，其实很简单，使用http协议的loginProxy.html，在loginForm.html里使用ajaxSubmit提交表单，成功之后使用
 
 ~~~ javascript
-window.location.href = 'http://locahost/loginProxy.html';
+window.location.href = 'http://localhost/loginProxy.html';
 ~~~
 重定向到http协议的loginProxy.html，这样iframe内外就处在同一个域，从而绕过了跨域问题。
