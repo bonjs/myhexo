@@ -4,55 +4,66 @@ date: 2016-06-26 15:39:05
 tags: [原创,promise]
 ---
 
-### ThePromise.js
+### bonPromise.js
 
-https://github.com/bonjs/ThePromise
+### 启动
+~~~ javascript
+git clone https://github.com/bonjs/bonPromise.git
+npm install
+node app
+~~~
 
 
-~~~javascript
-var thePromise = function() {
+~~~ javascript
+var bonPromise = function(fns) {
+	var _promise = arguments.callee;
 	
-	var _f = arguments.callee;
+	var sliceProto = Array.prototype.slice;
 	
-	var fns = Array.prototype.slice.call(arguments, 0);
+	var params = [function(result) {
+		result && _promise.apply(null, [fns].concat(sliceProto.apply(arguments)));
+	}].concat(sliceProto.call(arguments, 1));
+	
 	var fn = fns.shift();
-	fn && fn.call(null, function(result, msg) {
-		console.log(msg);
-		result && _f.apply(null, fns);
-	});
-}
+	fn && fn.apply(null, params);
+};
+
 ~~~
 
 ### 调用方式
-~~~javascript
+~~~ javascript
+
 function f1(f) {
-    $.get('data.json?type=1', {}, function(d) {
-        if(d.success) {
-            f(true, 'step1成功');
-        } else {
-            f(false, 'step1失败');
-        }
+    $.get('data/step1.json', {}, function(d) {
+    	if(d.success) {
+			console.log('step1成功');
+    		f(true, d.step2Id);	// 下个函数请示可能依赖这次的请求结果
+    	} else {
+    		f(false, 'step1失败');
+    	}
     });
 }
 function f2(f) {
-    $.get('data.json?type=2', {}, function(d) {
-        if(d.success) {
-            f(true, 'step2成功');
-        } else {
-            f(false, 'step2失败');
-        }
+    $.get('data/step2.json', {}, function(d) {
+    	if(d.success) {
+			console.log('step2成功');
+    		f(true, d.step3Id);	// 下个函数请示可能依赖这次的请求结果
+    	} else {
+    		f(false, 'step2失败');
+    	}
     });
 }
 function f3(f) {
-    $.get('data.json?type=3', {}, function(d) {
-        if(d.success) {
-            f(true, 'step3成功');
-        } else {
-            f(false, 'step3失败');
-        }
+    $.get('data/step3.json', {}, function(d) {
+    	if(d.success) {
+			console.log('step3成功');
+    		f(true, 'step3成功');
+    	} else {
+    		f(false, 'step3失败');
+    	}
     });
 }
- 
-thePromise(f2, f1, f3);
+
+bonPromise([f2, f1, f3]);
 ~~~
 
