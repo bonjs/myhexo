@@ -8,6 +8,12 @@ tags: [jquery.form.js,encrypt,jsencrypt.min.js,RSA,加密]
 
 jquery.form.js中是对原生form表单验证提交进行了封装的一个插件,使用起来非常的方便,但是我们经常有对密码域加密码的需求,而jquery.form.js并没实现这一功能,下面我们来对它进行扩展来实现这一功能.
 
+### 启动
+``` javascript
+git clone https://github.com/bonjs/formEncrypt.git
+node app
+```
+
 ### 源码
 ```javascript
 /**
