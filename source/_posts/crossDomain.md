@@ -20,7 +20,7 @@ http	loginProxy.html
 
 但是上正式环境的时候却出了问题，报Mixed Content的错误， 无法加载iframe内网页，原来https下无法加载http的界面，涉及https的跨域比其他类型（不同服务器，不同域名，不同端口）更严格.
 
-后来想到了一个解决方案，使用http协议的loginProxy.html，在loginForm.html里使用ajaxSubmit提交表单，成功之后使用
+后来想到了一个解决方案，其实很简单，使用http协议的loginProxy.html，在loginForm.html里使用ajaxSubmit提交表单，成功之后使用
 
 ~~~ javascript
 window.location.href = 'http://locahost/loginProxy.html';
