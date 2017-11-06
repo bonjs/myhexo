@@ -1,0 +1,64 @@
+## Services
+google_analytics:
+duoshuo:
+
+## Meta
+rss: https://jysperm.me/atom.xml
+favicon: /favicon.png
+icon: /favicon.png
+source_url:
+license:
+  name: 'CC BY-NC-SA 3.0'
+  url: 'http://creativecommons.org/licenses/by-nc-sa/3.0/cn'
+
+## Menus
+menus:
+  'Home': /
+
+right_menus:
+  'RSS': /atom.xml
+  'fork on Github':
+    target: '_blank'
+    href: 'hexo-theme-simpleblock'
+
+## Banners && Widgets
+banners:
+  jade: |
+    a(href='https://github.com/jysperm/hexo-theme-simpleblock') 与精子同款的博客主题 simpleblock 现已发布！
+
+widgets:
+  -
+    markdown: |
+      Simple Block 是一个基于线框设计的简单的 Hexo 主题，拆分自 [精子的博客](https://jysperm.me)。
+      支持使用 Jade 或 Markdown 来向边栏添加小部件，或向正文前添加横幅。
+
+      技术栈：
+
+      * Jade - 页面模板
+      * Less/Sass - 页面样式
+      * Bower - 前端包管理器
+      * CoffeeScript - Hexo 拓展脚本
+      * Gulp - 编译工具
+
+  -
+    tags: true
+
+  -
+    archives: true
+
+  -
+    copyright: true
+
+## SNS (Work in progress)
+sns:
+  qq: '184300584'
+  qun: '61137226'
+  v2ex: 'jybox'
+  mobile: '17091927884'
+  github: 'jysperm'
+  keybase: 'jysperm'
+  zhihu: 'jysperm'
+  google_plus: '+王子亭jysperm'
+  segmentfault: 'jysperm'
+  twitter: 'jysperm'
+  bitcoin: '13v2BTCMZMHg5v87susgg86HFZqXERuwUd'
