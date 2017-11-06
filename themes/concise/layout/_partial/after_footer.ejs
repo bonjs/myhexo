@@ -19,23 +19,23 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <% } %>
 
 <script>
-	var leftP = $('#leftPanel');
-	var leftPanelFun = function() {
+	var rightP = $('#leftPanel');
+	var rightPanelFun = function() {
 		if(window.scrollY > 55 && document.body.clientWidth > 830){
-			leftP.css({
+			rightP.css({
 				'position': 'fixed',
 				'top': '20px'
 			});
 		} else {
-			leftP.css({
+			rightP.css({
 				'position': 'static',
 				'top': '0px'
 			});
 		}
 	}
 	$(window).on({
-		scroll: leftPanelFun,
-		relize: leftPanelFun
+		scroll: rightPanelFun,
+		relize: rightPanelFun
 	})
 	
 </script>
