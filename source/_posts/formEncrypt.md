@@ -1,7 +1,7 @@
 ﻿---
 title: formEncrypt
 date: 2016-09-28 18:51:49
-tags: [jquery.form.js,encrypt,jsencrypt.min.js]
+tags: [jquery.form.js,encrypt,jsencrypt.min.js,RSA,加密]
 ---
 jquery.form.js中是对原生form表单验证提交进行了封装的一个插件,使用起来非常的方便,但是我们经常有对密码域加密码的需求,而jquery.form.js并没实现这一功能,下面我们来对它进行扩展来实现这一功能.
 
@@ -24,13 +24,13 @@ $.fn.ajaxSubmit = function() {
 	
 	return function(opt) {
 		var form = this;
-		var beforeSubmit = opt.beforeSubmit;
+		var beforeSubmit = opt.beforeSubmit || function() {};
 		opt.beforeSubmit = function(fields) {
 			var result = beforeSubmit.apply(this, arguments);
 
 			fields.forEach(function(fieldObj, i) {
-				if($('*[encrypt=true][name=' + fieldObj.name + ']', form).length) {
-					fieldObj.value = encrypt.encrypt(fieldObj.value); 
+				if(!!form[0][fieldObj.name].getAttribute('encrypt') == true) { 
+					fieldObj.value = encrypt.encrypt(fieldObj.value);
 				}
 			});
 
@@ -59,3 +59,5 @@ $('#f').ajaxSubmit({
 	}
 })
 ```
+
+通过ajaxSubmit提交表单时,添加了encrypt=true的字段发送的数据会自动进行加密
