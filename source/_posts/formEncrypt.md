@@ -1,7 +1,7 @@
 ﻿---
 title: formEncrypt
 date: 2016-09-28 18:51:49
-tags: [jquery.form.js,encrypt,jsencrypt.min.js,RSA,加密]
+tags: [jquery.form.js,encrypt,RSA,加密]
 ---
 
 

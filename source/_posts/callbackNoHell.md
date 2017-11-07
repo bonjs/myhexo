@@ -1,7 +1,7 @@
 ﻿---
 title: callbackNoHell
 date: 2016-06-26 15:39:05
-tags: [原创,promise]
+tags: [promise]
 ---
 
 # callback, but no hell !!!
