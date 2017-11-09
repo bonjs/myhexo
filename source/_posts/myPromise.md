@@ -1,7 +1,7 @@
 ﻿---
 title: 自己实现的Promise
 date: 2016-06-26 15:39:05
-tags:
+tags: [原创,promise]
 ---
 
 ### bonPromise.js

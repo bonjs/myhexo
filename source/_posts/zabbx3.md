@@ -1,7 +1,7 @@
 ﻿---
 title: Zabbix架构的改进方案(三)
 date: 2016-03-26 21:40:54
-tags:
+tags: [原创,zabbix,架构]
 ---
 
 由于此次改进涉及不少内部框架的, 如果都介绍出来篇幅太长,所以这里只介绍下对zabbix的封装的新控制器BaseController.php, 原理也很简单,就是根据传来的method参数名, 去执行对应的方法
