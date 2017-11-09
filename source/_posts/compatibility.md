@@ -6,8 +6,8 @@ tags: [compatibility,兼容,chrome,输入法]
 
 现实中我们经常会遇禁止输入中文的场景，常见的处理方式
 
-　1, 使用css样式ime-mode:disabled
-　2, 使用js在keyup事件中将输入的中文替换为空
+1, 使用css样式`ime-mode:disabled`
+2, 使用js在`keyup`事件中将输入的中文替换为空
 
 但是第一种方式ie,firefox都可以使用，但我大谷歌居然不兼容，谷歌也有不兼容的时候．．
 而第二种方式怎么样呢，输入过程会有汉字选择框，并且汉字在上屏后突然消失，感觉好滑稽的样子，体验上不够友好，并且在chrome, firefox下，汉字在输入过程中上屏之前，input的value是对应按钮的字母的值．我们来看下：
