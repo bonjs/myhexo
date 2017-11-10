@@ -36,7 +36,45 @@
   <% } else { %>
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
+  <script>
 
+	(function() {
+		var protocol = window.location.protocol;
+		
+		var reg = /^(?:((?:\d+\.){3}\d+)|.*?((\w+\.)?\w+))(\:\d+)?$/;
+		var base = document.createElement('base');
+		var m = (window.location.host.match(reg) || []);
+		
+		var ip = m[1];
+		var rootDomain = m[2];
+		var port = m[4] || '';
+		var isDomain = !!m[3]; // 是否是域名
+
+
+		var server = (ip || rootDomain) + port;
+			
+		if(isDomain) {
+                        base.setAttribute('href', protocol + '/' + '/www.' + server);
+                } else {
+                        base.setAttribute('href', protocol + '/' + '/' + server);
+                }
+		
+		document.head.appendChild(base);
+		return;
+		if(rootDomain) {
+			if(isDomain) {	
+				base.setAttribute('href', protocol + '/' + '/www.' + rootDomain + port);
+			} else {
+				base.setAttribute('href', protocol + '/' + '/' + rootDomain + port);
+			}
+		} else {
+			base.setAttribute('href', protocol + '/' + '/' + ip + port);
+		}
+		document.head.appendChild(base);
+	})();
+  </script>
+  
+  
   <link href="<%- config.root %>favicon.png" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">

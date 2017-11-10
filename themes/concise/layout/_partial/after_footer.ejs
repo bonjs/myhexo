@@ -43,6 +43,31 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 	
 </script>
 
+<script>
+
+        (function() {
+
+                var protocol = window.location.protocol;
+
+                //var reg = /^((?:\d+\.){3}\d+)|.*?((?:\w+\.)?\w+)$/;
+                var reg = /^(?:.*?((?:bonjs|yoycn)\.com)|.*?((?:\w+\.)?[\w.]+))$/;
+
+                var rootDomain = (document.domain.match(reg) || []);
+
+                var articleDomain = 'article.' + rootDomain[1];
+                $('.archive-post, article.post, #rightPanel').find('a[path]').each(function(i, d) {
+                        if(rootDomain[1]) {     // bonjs.com访问
+                                var path = d.getAttribute('path').replace(/^article/g, '');
+                                $(this).attr('href', protocol + '/' + '/' + articleDomain + path).removeAttr('path');
+                        } else {                        // 其他域名及ip访问
+                                var path = d.getAttribute('path');
+                                $(this).attr('href', protocol + '/' + '/' + rootDomain[2] + '/' + path).removeAttr('path');
+                        }
+                });
+        })();
+</script>
+
+
 <%- partial('baiduStat') %>
 
 <script src="/instantclick.js" data-no-instant></script>
