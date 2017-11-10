@@ -1,7 +1,8 @@
 menu:
-  About: /about
-  Archives: /archives
-  RSS: /atom.xml
+  Archives: archives
+  #RSS: /atom.xml
+  Github: https://github.com/bonjs
+  About Alex: https://about.bonjs.com
 
 widgets:
 - search
