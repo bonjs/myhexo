@@ -4,11 +4,11 @@
   <header id="header"><%- partial('_partial/header') %></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft" style="z-index:10"><div id="wrapper"><%- body %></div></div>
-    <aside id="sidebar" class="alignright" style="position: relattive">
-		<div id="leftPanel">
+    <div id="sidebar" class="alignright" style="position: relative;">
+		<div id="rightPanel">
 			<%- partial('_partial/sidebar', {}, {cache: true}) %>
 		</div>
-	</aside>
+	</div>
     <div class="clearfix"></div>
   </div>
   <footer id="footer" class="inner"><%- partial('_partial/footer') %></footer>
