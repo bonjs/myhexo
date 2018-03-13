@@ -15,13 +15,13 @@ box-shadow:inset 0 0 44px 12px #1c1fc2;
 后来经过多次调试发现，img在没有src的情况下可以设置inset方式的`box-shadow`，并且也可以使用`before`及`after`伪类，那我使用js动态的去删除src属性然后设置它的`background-image`，再设置`box-shadow`和`before`,`after`伪类不就可以了吗？效果如下：
 
 <div>
-<img class="shadow" alt="  " style="width:316px; height: 194px">
+<img class="shadow" alt="" style="width:316px; height: 194px">
 </div>
 
 完整代码如下：
 ### HTML
 ~~~html
-<img class="shadow" alt="  " style="width:316px; height: 194px">
+<img class="shadow" alt="" style="width:316px; height: 194px">
 ~~~
 
 ### CSS
