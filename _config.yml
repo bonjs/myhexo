@@ -88,9 +88,9 @@ lazyload:
        #github: git@github.com:bonjs/bonjs.github.io.git,master
 deploy:
     type: ftpsync
-    host: 127.0.0.1
-    user: admin
-    pass: 000
+    host: bonjs.com
+    user: sun
+    pass: sun
     remote: web
     port: 21
     ignore: [node_modules]
