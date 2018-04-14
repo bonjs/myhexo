@@ -1,9 +1,8 @@
 
-
 <% if (site.posts.length){ %>
 <div class="widget tag" data-instant>
-  <h3 class="title"><%= __('recent_posts') %></h3>
-  <ul class="entry" data-instant>
+  <h3 class="title"><a href="https://www.bonjs.com/archives"><%= __('recent_posts') %></a></h3>
+  <ul class="entry" style="height:300px;" data-instant>
     <% site.posts.sort('date', -1).limit(30).each(function(post){ %>
       <li>
         <a path="<%= post.path %>"><%= post.title %></a>
