@@ -4,7 +4,7 @@
 <div class="widget tag" data-instant>
   <h3 class="title"><%= __('recent_posts') %></h3>
   <ul class="entry" data-instant>
-    <% site.posts.sort('date', -1).limit(12).each(function(post){ %>
+    <% site.posts.sort('date', -1).limit(30).each(function(post){ %>
       <li>
         <a path="<%= post.path %>"><%= post.title %></a>
       </li>
