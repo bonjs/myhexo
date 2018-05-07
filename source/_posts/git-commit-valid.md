@@ -103,8 +103,28 @@ var firstLineFromBuffer = function (buffer) {
 
 然后我们随便编辑我们的工作中的文件，然后提交，提交信息为一个不规范的信息，如：随便，提交后有以下提示：
 
-<div style="text-align: center">
+<div>
 	<img src="/image/git-commit-valid.png">
 </div>
 ok，成功！可以看到我们的不规范的提交已被阻止，并且给出了友好的提示．
-（未完待续）
+
+但是因为该文件处于.git文件夹中，不受git版本控制，需要开发者手动设置，比较费事，我们可以将该文件放进工作区中，然后设置npm勾子，使npm install的时候
+设置该文件到.git/hooks/commit-msg的软链接，这样就可以实现自动化．
+
+```javascript
+"scripts": {
+	"postinstall": "node git-commit-hooks"
+},
+```
+
+git-commit-hooks.js文件为设置软链接的脚本
+```javascript
+var exec = require('child_process').exec
+
+exec('rm -f ./.git/hooks/commit-msg')
+exec('ln -s ../../commit-msg.js ./.git/hooks/commit-msg')
+
+```
+github: https://github.com/bonjs/git-commit-valid
+
+打完收工
