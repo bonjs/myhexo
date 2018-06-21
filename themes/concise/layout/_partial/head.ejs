@@ -41,7 +41,8 @@
 	(function() {
 		var protocol = window.location.protocol;
 		
-		var reg = /^(?:((?:\d+\.){3}\d+)|.*?((\w+\.)?\w+))(\:\d+)?$/;
+		//var reg = /^(?:((?:\d+\.){3}\d+)|.*?((\w+\.)?\w+))(\:\d+)?$/;
+		var reg = /^(?:((?:\d+\.){3}\d+)|.*?(([^.]+\.)?[^.]+))(\:\d+)?$/;
 		var base = document.createElement('base');
 		var m = (window.location.host.match(reg) || []);
 		
@@ -54,10 +55,10 @@
 		var server = (ip || rootDomain) + port;
 			
 		if(isDomain) {
-                        base.setAttribute('href', protocol + '/' + '/www.' + server);
-                } else {
-                        base.setAttribute('href', protocol + '/' + '/' + server);
-                }
+				base.setAttribute('href', protocol + '/' + '/www.' + server);
+		} else {
+				base.setAttribute('href', protocol + '/' + '/' + server);
+		}
 		
 		document.head.appendChild(base);
 		return;

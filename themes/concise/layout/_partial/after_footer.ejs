@@ -50,7 +50,8 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
                 var protocol = window.location.protocol;
 
                 //var reg = /^((?:\d+\.){3}\d+)|.*?((?:\w+\.)?\w+)$/;
-                var reg = /^(?:.*?((?:bonjs|yoycn)\.com)|.*?((?:\w+\.)?[\w.]+))$/;
+                //var reg = /^(?:.*?((?:bonjs|yoycn)\.com)|.*?((?:\w+\.)?[\w.]+))$/;
+                var reg = /^(?:.*?((?:bonjs|yoycn)\.com)|.*?((?:[^.]+\.)?[\w.]+))$/;
 
                 var rootDomain = (document.domain.match(reg) || []);
 
