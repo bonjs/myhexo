@@ -5,7 +5,7 @@
   <ul class="entry" style="height:300px;" data-instant>
     <% site.posts.sort('date', -1).limit(30).each(function(post){ %>
       <li>
-        <a path="<%= post.path %>"><%= post.title %></a>
+        <a href="/<%= post.path %>"><%= post.title %></a>
       </li>
     <% }); %>
   </ul>
