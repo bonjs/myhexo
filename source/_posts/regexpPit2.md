@@ -28,21 +28,21 @@ bonTemplate
 ``` javascript
 (?:test|,)
 ```
-<img src=/image/regTest1.png>
+<img src="/image/regTest1.png">
 
 哥想这下没问题了, 可不一样会, 产品又来了, 说子字符也不能包含abc, 我去!
 
-<img src=/image/87417c60jw1fam6z4pay6g208k06lqv5.gif>
+<img src="/image/87417c60jw1fam6z4pay6g208k06lqv5.gif">
 那就改改吧, 这还能难的倒哥吗?
 ``` javascript
 (test|,|abc)
 ```
-<img src=/image/regTest2.png>
+<img src="/image/regTest2.png">
 
 ..等等, 不对啊, 我是按test逗号abc这三个split,怎么会出现在结果中!?
 上一个结果还是正常的, 这次就加了一个abc,怎么就不正常了呢? 
 哦.. 还有个差别是一个是捕获性分组, 一个是非捕获性分组, 难道还和这个有关?
 于是改了下,改成非捕获性分组
 
-<img src=/image/regTest3.png>
+<img src="/image/regTest3.png">
 果然啊, <b>捕获性分组还是非捕获性分组居然影响到了split的结果.. ,要知道在其他用法中, 如match, exec, test, 在这些用法中, 分组是捕获性还是非捕获性是不会影响到结果的,只是用来取值用的, 但在split中却影响匹配结果!</b>
