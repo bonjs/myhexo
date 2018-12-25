@@ -73,7 +73,7 @@ sitemap:
     template: ./sitemap_template.xml
 
 lazyload:
-  enable: true 
+  enable: false
   onlypost: false
   loadingImg: # eg. ./images/loading.png
 
