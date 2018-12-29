@@ -4,7 +4,7 @@ date: 2018-12-25 15:49:40
 tags: [stringify, parse, npm]
 ---
 
-# stringify-parse [![Build Status](https://travis-ci.org/bonjs/stringify-parse.svg?branch=master)](https://travis-ci.org/bonjs/stringify-parse)
+# stringify-parse [![Build Status](https://travis-ci.org/bonjs/stringify-parse.svg?branch=master)](https://travis-ci.org/bonjs/stringify-parse) [![](https://img.shields.io/npm/v/stringify-parse.svg)](https://www.npmjs.com/package/stringify-parse) [![](https://img.shields.io/npm/l/stringify-parse.svg)](https://img.shields.io/npm/l/stringify-parse.svg)
 ### A tool like JSON.stringify and JSON.parse but could convert the type Function and RegExp in the js object.
 
 Install
