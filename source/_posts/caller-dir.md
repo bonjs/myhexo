@@ -3,8 +3,7 @@ title: caller-dir
 date: 2018-12-27 15:03:31
 tags: [npm, caller-dir, caller, dir]
 ---
-
-# caller-dir
+# caller-dir [![Build Status](https://travis-ci.org/bonjs/caller-dir.svg?branch=master)](https://travis-ci.org/bonjs/caller-dir)
 
 ### A tool which could get the dirpath of a function method's caller
 

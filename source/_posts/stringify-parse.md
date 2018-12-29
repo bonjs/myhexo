@@ -4,8 +4,8 @@ date: 2018-12-25 15:49:40
 tags: [stringify, parse, npm]
 ---
 
-# stringify-parse
-### A tool like JSON.stringify and JSON.parse but can convert the type Function and RegExp in the js object.
+# stringify-parse [![Build Status](https://travis-ci.org/bonjs/stringify-parse.svg?branch=master)](https://travis-ci.org/bonjs/stringify-parse)
+### A tool like JSON.stringify and JSON.parse but could convert the type Function and RegExp in the js object.
 
 Install
 ~~~bash
@@ -51,4 +51,3 @@ let str = `{"name":"demo","method":function() {
  `;
 console.log(stringifyParse.parse(str));
 ~~~
-
