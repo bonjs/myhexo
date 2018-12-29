@@ -6,7 +6,7 @@
     "version": "3.8.0"
   },
   "scripts": {
-    "start": "rm -rf web && hexo g && node publish"
+    "start": "rm -rf web && hexo g && node publish && node refreshCdn"
   },
   "dependencies": {
     "hexo": "^3.7.0",
@@ -23,7 +23,8 @@
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0"
+    "hexo-server": "^0.2.0",
+    "qcloud-cdn-node-sdk": "^1.0.0"
   },
   "devDependencies": {
     "cos-nodejs-sdk-v5": "^2.4.3"
