@@ -4,7 +4,7 @@ date: 2016-08-31 17:07:07
 tags: [原创,模板,引擎,高效,轻量]
 ---
 
-# bonTemplate
+# bonTemplate [![Build Status](https://travis-ci.org/bonjs/bon-template.svg?branch=mocha)](https://travis-ci.org/bonjs/bon-template) [![](https://img.shields.io/npm/v/bon-template.svg)](https://www.npmjs.com/package/bon-template) [![](https://img.shields.io/npm/l/bon-template.svg)](https://img.shields.io/npm/l/bon-template.svg)
 * 高效(`100`条数据执行`10000`次一共耗时`50`多ms，我本机上的测试结果，视电脑配置)
 * 轻量(压缩前也才`3K`多)
 * 支持循环<each>

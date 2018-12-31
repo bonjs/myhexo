@@ -4,7 +4,6 @@ date: 2018-12-28 16:47:13
 tags: [require, alias, npm]
 ---
 # require-alias-node [![Build Status](https://travis-ci.org/bonjs/require-alias-node.svg?branch=master)](https://travis-ci.org/bonjs/require-alias-node) [![](https://img.shields.io/npm/v/require-alias-node.svg)](https://www.npmjs.com/package/require-alias-node) [![](https://img.shields.io/npm/l/require-alias-node.svg)](https://img.shields.io/npm/l/require-alias-node.svg)
-
 ### A tool which could set an alias for the module's path which is required in the `require` of nodejs     or `import` of ES6
 
 It's the alias of `require-import-alias`
@@ -20,7 +19,7 @@ const component = require('../../../src/component');
 const moduleA = require('../../../src/component/render/moduleA');
 ~~~
 
-Now we can use this tool `require-alias-node` to set alias for the moduleA, such as :
+Now we can use this tool `require-alias-node` to set alias for the moduleA, is looks like:
 ~~~javascript
 const requireAliasNode = require('require-alias-node');
 requireAliasNode.setAlias({
