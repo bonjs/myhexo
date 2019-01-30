@@ -2,6 +2,7 @@ menu:
   Archives: /archives
   #RSS: /atom.xml
   Github: https://github.com/bonjs
+  NPM: https://www.npmjs.com/~bonjs
   About Alex: /about
 
 widgets:
