@@ -13,7 +13,7 @@ It's the alias of `require-import-alias`
 npm install require-alias-node
 ~~~
 
-Sometimes, we may use a module with a long path to be required, and the path may contain many level, is's not very intuitive ! 
+Sometimes, we may use a module with a long path to be required, and the path may contain many level, it's not very intuitive ! 
 ~~~javascript
 const component = require('../../../src/component');
 const moduleA = require('../../../src/component/render/moduleA');
