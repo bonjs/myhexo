@@ -1,3 +1,8 @@
+
+var bucket = 'blog-1253680661';
+var region = 'ap-beijing';
+
+
 var fs = require('fs')
 var path = require('path');
 // 引入模块
@@ -46,8 +51,8 @@ fileDisplay(path.resolve('./web'));
 
 var files = fileList.reduce(function(arr, it, i) {
 	arr.push({
-		Bucket: 'my2-1253680661',
-		Region: 'ap-beijing',
+		Bucket: bucket, //'my-1253680661',
+		Region: region, //'ap-beijing',
 		Key: it.replace(path.resolve('./web') + '/', ''),
 		FilePath: it
 	});
