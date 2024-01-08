@@ -1,9 +1,10 @@
 ---
 title: 在pve lxc容器中安装openwrt
 date: 2023-6-28 00:01:23
-tags: [pve, openwrt]
+tags: [pve, openwrt, lxc]
 ---
 
+相比虚拟机中运行openwrt，在lxc容器中运行性能损耗极小，接近物理机，以我的8600T CPU测试为例，虚拟机中运行openwrt时cpu占用动不动就是20-30%, 而lxc中运行openwrt, 绝大多数时间都是1%以下, 效率如此之高，那还等什么，出发！
 
 ## 第一步：
 
