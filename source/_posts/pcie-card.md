@@ -15,3 +15,32 @@ tags: [PCIe]
 此种拆分卡使用了plx芯片，性能上会有损耗，比不上cpu直通，主要是价格超贵，算了吧
 
 对于1，2种情况，我们配置好拆分以后，需要一个pcie拆分卡，这也是我们今天文章的主角，
+
+#### 首先还是在闲鱼上看到有现成的pcb裸板，价格还挺便宜，还是镀金的，虽然嘉立创可以免费打板，但我不会画，哈哈
+![img](/image/pcie/pcb1.jpg)
+
+#### 按卖家提供的bom清单采购
+电容电阻
+![img](/image/pcie/bom1.jpg)
+时钟芯片
+![img](/image/pcie/clock-chip.jpg)
+pcie x8插槽
+![img](/image/pcie/bom2.jpg)
+焊接
+![img](/image/pcie/pcb2.jpg)
+
+初步完成
+![img](/image/pcie/pcb3.jpg)
+
+增加12v转3.3v模块(中兴ZXDN10)，提高负载能力, 原板子上没有留位，自己刮铜箔吧
+![img](/image/pcie/dc-dc.jpg)
+
+插上三块硬盘测试
+![img](/image/pcie/pcb4.jpg)
+
+阻断原3.3v接口,以防出现意外电压对主板产生影响或损坏
+![img](/image/pcie/pcb5.jpg)
+
+顺便晒下自己焊的另一个板子，当然自己只是纯焊接
+![img](/image/pcie/pcie-pcb4.jpg)
+
