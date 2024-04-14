@@ -32,8 +32,10 @@ pcie x8插槽
 初步完成
 ![img](/image/pcie/pcb3.jpg)
 
-增加12v转3.3v模块(中兴ZXDN10)，提高负载能力, 原板子上没有留位，自己刮铜箔吧
+增加12v转3.3v模块(中兴ZXDN10)，增加此模块不影响功能，只是提高负载能力, 原板子上没有留位，自己刮铜箔吧
 ![img](/image/pcie/dc-dc.jpg)
+调节下最右边对地电阻380欧时输出3.3v左右
+![img](/image/pcie/ZXDN10.jpeg)
 
 插上三块硬盘测试
 ![img](/image/pcie/pcb4.jpg)
