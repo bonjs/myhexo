@@ -31,3 +31,5 @@ OpenWrt路由器B IP：`192.168.6.1, 10.0.0.2`
 ![img](/image/wireguard/wg4.jpg)
 接口选择`wg0`, 路由类型`unicast`, 目标为B路由器网段`192.168.6.0/24`, 网关为A路由器WireGuardm网段地址`10.0.0.1`
 
+### 如无意外，此时已经组网成功，`状态` -> `WireGuard`查看
+![img](/image/wireguard/wg5.jpg)
