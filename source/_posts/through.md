@@ -62,6 +62,10 @@ kvm配置
 ```shell
 echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
 ```
+信任设备允许不安全中断
+```shell
+'echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf'
+```
 
 重启 
 ```shell
